@@ -1,0 +1,78 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-06-03T15:17:31.602Z",
+        "line": 8,
+        "name": "ambulance_call tablosundaki patient_id \u003d 1 olan hastanin driver\u0027i Smith olan ambulance ile 2 defa sevkinin gerceklestigini dogrulayiniz",
+        "description": "",
+        "id": "jdbc-quers-1;ambulance-call-tablosundaki-patient-id-\u003d-1-olan-hastanin-driver-i-smith-olan-ambulance-ile-2-defa-sevkinin-gerceklestigini-dogrulayiniz",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Database baglantisi kurulur.",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1006900,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Query hazirlanir",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1001900,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Query calistirilir ve sonuclari alinir",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 994900,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Query sonuclari dogrulanir",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 994200,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Database baglantisi kapatilir",
+            "match": {},
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@t113"
+          }
+        ]
+      }
+    ],
+    "name": "JDBC Quers_1",
+    "description": "",
+    "id": "jdbc-quers-1",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/JDBCQuery_1.feature",
+    "tags": []
+  }
+]
