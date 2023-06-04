@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.51">
-    <testcase classname="JDBC Quers_1" name="ambulance_call tablosundaki patient_id = 1 olan hastanin driver'i Smith olan ambulance ile 2 defa sevkinin gerceklestigini dogrulayiniz" time="0.208">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[* Database baglantisi kurulur...............................................undefined
-* Query hazirlanir..........................................................skipped
-* Query calistirilir ve sonuclari alinir....................................skipped
-* Query sonuclari dogrulanir................................................skipped
-* Database baglantisi kapatilir.............................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.867">
+    <testcase classname="JDBC Quers_1" name="ambulance_call tablosundaki patient_id = 1 olan hastanin driver'i Smith olan ambulance ile 2 defa sevkinin gerceklestigini dogrulayiniz" time="0.225">
+        <system-out>
+            <![CDATA[* Database baglantisi kurulur...............................................passed
+* Query hazirlanir..........................................................passed
+* Query calistirilir ve sonuclari alinir....................................passed
+* Query sonuclari dogrulanir................................................passed
+* Database baglantisi kapatilir.............................................passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="JDBC Query_2" name="hastane sistemine gerekli bilgiler girilerek randevu alinabildigini dogrulayiniz" time="0.016">
+        <system-out>
+            <![CDATA[* Database baglantisi kurulur...............................................passed
+* Updadate Query'si hazirlanir..............................................passed
+* Sonuclar alinir ve dogrulanir.............................................passed
+* Database baglantisi kapatilir.............................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

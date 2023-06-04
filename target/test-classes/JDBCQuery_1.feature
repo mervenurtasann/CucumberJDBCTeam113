@@ -24,5 +24,3 @@ Feature: JDBC Quers_1
 
 
 
-
-
