@@ -3,67 +3,55 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-06-04T22:09:43.432Z",
-        "line": 8,
-        "name": "ambulance_call tablosundaki patient_id \u003d 1 olan hastanin driver\u0027i Smith olan ambulance ile 2 defa sevkinin gerceklestigini dogrulayiniz",
+        "line": 3,
+        "name": "Connection",
         "description": "",
-        "id": "jdbc-quers-1;ambulance-call-tablosundaki-patient-id-\u003d-1-olan-hastanin-driver-i-smith-olan-ambulance-ile-2-defa-sevkinin-gerceklestigini-dogrulayiniz",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 4995400,
-              "status": "passed"
+              "error_message": "java.lang.RuntimeException: java.sql.SQLException: Access denied for user \u0027heallife_hospitaltraininguser\u0027@\u002778.165.141.122\u0027 (using password: YES)\r\n\tat utulities.JDBCReusableMethods.createConnection(JDBCReusableMethods.java:24)\r\n\tat stepDefinitions.Stepdefinition.database_baglantisi_kurulur(Stepdefinition.java:31)\r\n\tat ✽.Database baglantisi kurulur.(file:///C:/Users/engintasan/IdeaProjects/CucumberJDBCTeam113/src/test/resources/JDBCQuery_4.feature:4)\r\nCaused by: java.sql.SQLException: Access denied for user \u0027heallife_hospitaltraininguser\u0027@\u002778.165.141.122\u0027 (using password: YES)\r\n\tat com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)\r\n\tat com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)\r\n\tat com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)\r\n\tat com.mysql.cj.jdbc.ConnectionImpl.\u003cinit\u003e(ConnectionImpl.java:444)\r\n\tat com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)\r\n\tat com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)\r\n\tat java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)\r\n\tat java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)\r\n\tat utulities.JDBCReusableMethods.createConnection(JDBCReusableMethods.java:22)\r\n\tat stepDefinitions.Stepdefinition.database_baglantisi_kurulur(Stepdefinition.java:31)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "duration": 789100300,
+              "status": "failed"
             },
-            "line": 10,
+            "line": 4,
             "name": "Database baglantisi kurulur.",
             "match": {
               "location": "stepDefinitions.Stepdefinition.database_baglantisi_kurulur()"
             },
             "keyword": "* "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-06-21T16:42:01.444Z",
+        "line": 10,
+        "name": "Database üzerinden languages tablosundaki short_code \"yi\" olan verinin language bilgisinin \"Yiddish\" oldugunu dogrulayin.",
+        "description": "",
+        "id": "jdbc-query-4;database-üzerinden-languages-tablosundaki-short-code-\"yi\"-olan-verinin-language-bilgisinin-\"yiddish\"-oldugunu-dogrulayin.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
           {
             "result": {
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "Query hazirlanir",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.query_hazirlanir()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "status": "passed"
+              "duration": 996100,
+              "status": "skipped"
             },
             "line": 12,
-            "name": "Query calistirilir ve sonuclari alinir",
+            "name": "Languages tablosuna query gönderilir ve sonuclar dogrulanir.",
             "match": {
-              "location": "stepDefinitions.Stepdefinition.query_calistirilir_ve_sonuclari_alinir()"
+              "location": "stepDefinitions.Stepdefinition.languages_tablosuna_query_gönderilir_ve_sonuclar_dogrulanir()"
             },
             "keyword": "* "
           },
           {
             "result": {
-              "duration": 1000500,
-              "status": "passed"
+              "duration": 1043500,
+              "status": "skipped"
             },
             "line": 13,
-            "name": "Query sonuclari dogrulanir",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.query_sonuclari_dogrulanir()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "duration": 1004100,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "Database baglantisi kapatilir",
+            "name": "Database baglantisi kapatilir.",
             "match": {
               "location": "stepDefinitions.Stepdefinition.database_baglantisi_kapatilir()"
             },
@@ -72,90 +60,16 @@
         ],
         "tags": [
           {
-            "name": "@t113"
+            "name": "@query4"
           }
         ]
       }
     ],
-    "name": "JDBC Quers_1",
+    "name": "JDBC Query_4",
     "description": "",
-    "id": "jdbc-quers-1",
+    "id": "jdbc-query-4",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/JDBCQuery_1.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2023-06-04T22:09:43.697Z",
-        "line": 4,
-        "name": "hastane sistemine gerekli bilgiler girilerek randevu alinabildigini dogrulayiniz",
-        "description": "",
-        "id": "jdbc-query-2;hastane-sistemine-gerekli-bilgiler-girilerek-randevu-alinabildigini-dogrulayiniz",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1013000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Database baglantisi kurulur.",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.database_baglantisi_kurulur()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "duration": 995100,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Updadate Query\u0027si hazirlanir.",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.updadate_query_si_hazirlanir()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "duration": 1994000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Sonuclar alinir ve dogrulanir.",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.sonuclar_alinir_ve_dogrulanir()"
-            },
-            "keyword": "* "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "Database baglantisi kapatilir",
-            "match": {
-              "location": "stepDefinitions.Stepdefinition.database_baglantisi_kapatilir()"
-            },
-            "keyword": "* "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@t113"
-          }
-        ]
-      }
-    ],
-    "name": "JDBC Query_2",
-    "description": "",
-    "id": "jdbc-query-2",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/JDBCQuery_2.feature",
+    "uri": "file:src/test/resources/JDBCQuery_4.feature",
     "tags": []
   }
 ]

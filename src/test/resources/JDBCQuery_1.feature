@@ -11,7 +11,7 @@ Feature: JDBC Quers_1
     * Query hazirlanir
     * Query calistirilir ve sonuclari alinir
     * Query sonuclari dogrulanir
-    * Database baglantisi kapatilir
+    * Database baglantisi kapatilir.
 
 
 

@@ -1,12 +1,14 @@
 Feature: JDBC Query_3
 
-  # Database üzerinden doctor_shift tablosunda staff_id=2 olan
-  # doctorun sali gunu kac saat calistigini dgorulayiniz. (2)
+   # Database üzerinden appointment tablosunda ögleden önce icin alinmis randevularin ögleden
+   # sonra icin alinan randevulardan az oldugunu dogrulayiniz.
 
-  Scenario: doctor_shift tablosunda staff_id=2 olan doctorun sali gunu kac saat calistigini dgorulayiniz.
-
+  Background: Connection
     * Database baglantisi kurulur.
-    * Query hazirlanir
-    * Query calistirilir ve sonuclari alinir
-    * Query sonuclari dogrulanir
-    * Database baglantisi kapatilir
+
+  @day4
+  Scenario: appointment tablosunda ögleden önce icin alinmis randevularin ögleden sonra icin alinan randevulardan az oldugunu dogrulayiniz.
+
+    * Randevu sayilarini ogrenebilecegimiz sql querysi hazirlanir.
+    * Query calistirilir ve sonuclar dogrulanir.
+    * Database baglantisi kapatilir.

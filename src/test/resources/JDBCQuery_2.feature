@@ -8,4 +8,4 @@ Feature: JDBC Query_2
     * Database baglantisi kurulur.
     * Updadate Query'si hazirlanir.
     * Sonuclar alinir ve dogrulanir.
-    * Database baglantisi kapatilir
+    * Database baglantisi kapatilir.

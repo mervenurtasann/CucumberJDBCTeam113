@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.867">
-    <testcase classname="JDBC Quers_1" name="ambulance_call tablosundaki patient_id = 1 olan hastanin driver'i Smith olan ambulance ile 2 defa sevkinin gerceklestigini dogrulayiniz" time="0.225">
-        <system-out>
-            <![CDATA[* Database baglantisi kurulur...............................................passed
-* Query hazirlanir..........................................................passed
-* Query calistirilir ve sonuclari alinir....................................passed
-* Query sonuclari dogrulanir................................................passed
-* Database baglantisi kapatilir.............................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.294">
+    <testcase classname="JDBC Query_4" name="Database üzerinden languages tablosundaki short_code &quot;yi&quot; olan verinin language bilgisinin &quot;Yiddish&quot; oldugunu dogrulayin." time="0.946">
+        <failure message="java.sql.SQLException: Access denied for user 'heallife_hospitaltraininguser'@'78.165.141.122' (using password: YES)" type="java.lang.RuntimeException">
+            <![CDATA[* Database baglantisi kurulur...............................................failed
+* Languages tablosuna query gönderilir ve sonuclar dogrulanir...............skipped
+* Database baglantisi kapatilir.............................................skipped
+
+StackTrace:
+java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'heallife_hospitaltraininguser'@'78.165.141.122' (using password: YES)
+	at utulities.JDBCReusableMethods.createConnection(JDBCReusableMethods.java:24)
+	at stepDefinitions.Stepdefinition.database_baglantisi_kurulur(Stepdefinition.java:31)
+	at ✽.Database baglantisi kurulur.(file:///C:/Users/engintasan/IdeaProjects/CucumberJDBCTeam113/src/test/resources/JDBCQuery_4.feature:4)
+Caused by: java.sql.SQLException: Access denied for user 'heallife_hospitaltraininguser'@'78.165.141.122' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at utulities.JDBCReusableMethods.createConnection(JDBCReusableMethods.java:22)
+	at stepDefinitions.Stepdefinition.database_baglantisi_kurulur(Stepdefinition.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="JDBC Query_2" name="hastane sistemine gerekli bilgiler girilerek randevu alinabildigini dogrulayiniz" time="0.016">
-        <system-out>
-            <![CDATA[* Database baglantisi kurulur...............................................passed
-* Updadate Query'si hazirlanir..............................................passed
-* Sonuclar alinir ve dogrulanir.............................................passed
-* Database baglantisi kapatilir.............................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
